@@ -6,9 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Weather app</title>
   <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="weather.js"></script>
 </head>
 <body>
-  <div class="app-wrap">
+  <!--<div class="app-wrap">
     <header>
       <input type="text" autocomplete="on" class="search-box" 
       placeholder="Search for a city..." />
@@ -25,6 +28,41 @@
       </div>
     </main>
   </div>
-  <script src="main.js"></script>
+  <script src="main.js"></script> -->
+  
+  <div id="h" class="app-wrap">
+    <div id="error"></div>
+    <div class="heading">
+      <h1 id="heading">Indian Weather Forecast</h1>
+    </div>
+    <header>
+      <input type="text" autocomplete="on" id="search-box"  class="search-box" 
+      placeholder="Search for a city..." />
+      <br><br>
+      <button onclick="city()">click for Weather Report</button>
+    </header>
+    <main>
+      <section class="location">
+        <div class="city" id="city"></div>
+        <div class="date" id="date"></div>
+      </section>
+      <div class="current">
+        <div class="temp" id="temp"><span></span></div><br><br>
+        <div class="weather" id="weather"></div>
+        <div class="hi-low" id="hi-low"></div>
+      </div>
+      <div class="grid">
+        <div> <p id="sunrise"></p>
+        </div>
+
+        <div><p id="sunset"></p> </div>
+      </div>
+        
+
+        
+      
+      <!---<img  id="above-head" src="images/weather-icons.jpg">--->
+    </main>
+  </div>
 </body>
 </html>
